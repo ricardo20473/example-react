@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { Button } from 'reactstrap';
 
-export default function CountHooks(props) {
+const CountHooks = ({title}) => {
   const [count, setCount] = useState(0);
 
   const add = () => setCount(count + 1);
@@ -10,11 +11,11 @@ export default function CountHooks(props) {
     <div className="count">
       <h2>Hooks - useState</h2>
       <nav className="nav">
-        <button onClick={add} className="btn btn-success">+</button>
-        <button onClick={subtract} className="btn btn-danger">-</button>
+        <Button onClick={add} color="success">+</Button>
+        <Button onClick={subtract} color="danger">-</Button>
       </nav>
       <h3 className="count__count-info">
-        Contador de {props.title} {count}
+        Contador de {title} {count}
       </h3>
     </div>
   );
@@ -23,3 +24,5 @@ export default function CountHooks(props) {
 CountHooks.defaultProps = {
   title: 'Clicks: '
 };
+
+export default CountHooks;

@@ -1,5 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarToggler,
+  Collapse,
+  Nav,
+  NavItem
+} from "reactstrap";
 
 // Page
 import Home from "./pages/layout/home/Home";
@@ -13,39 +21,30 @@ function App() {
     { name: "Contact", url: "/contact" },
   ];
 
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => setIsOpen(!isOpen);
+
   return (
     <Router>
       <div className="container">
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <Link to="/" className="navbar-brand">
-            React
-          </Link>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav ml-auto">
+        <Navbar color="light" light expand="md">
+          <NavbarBrand href="/">React</NavbarBrand>
+          <NavbarToggler onClick={toggle} />
+          <Collapse isOpen={isOpen} navbar>
+            <Nav className="ml-auto" navbar>
               {router.map((element, index) => {
                 return (
-                  <li className="nav-item active" key={index}>
+                  <NavItem key={index}>
                     <Link to={element.url} className="nav-link">
                       {element.name}
                     </Link>
-                  </li>
+                  </NavItem>
                 );
               })}
-            </ul>
-          </div>
-        </nav>
+            </Nav>
+          </Collapse>
+        </Navbar>
 
         <Switch>
           <Route path="/about">

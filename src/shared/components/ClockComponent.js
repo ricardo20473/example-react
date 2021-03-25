@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { Button } from 'reactstrap';
 
 function Reloj({hour}) {
   return <h3>{hour}</h3>;
 };
 
-export default function ClockHooks() {
+const ClockHooks = () => {
 
   const [hour, setHour] = useState(new Date().toLocaleTimeString());
   const [visible, setVisible] = useState(false);
@@ -32,9 +33,11 @@ export default function ClockHooks() {
       {visible && <Reloj hour={hour}/>}
 
       <nav className="nav">
-        <button onClick={() => setVisible(true)} className="btn btn-success">Play</button>
-        <button onClick={() => setVisible(false)} className="btn btn-danger">Stop</button>
+        <Button onClick={() => setVisible(true)} color="success">Play</Button>
+        <Button onClick={() => setVisible(false)} color="danger">Stop</Button>
       </nav>
     </div>
   );
 }
+
+export default ClockHooks;
