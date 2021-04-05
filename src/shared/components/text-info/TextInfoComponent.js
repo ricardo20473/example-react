@@ -6,7 +6,7 @@ const TextInfoComponent = ({ title, description }) => {
     <Row>
       <Col md={12}>
         <Jumbotron>
-          <h1 className="display-4">{title}</h1>
+          <h2 className="display-4">{title}</h2>
           <p className="lead">{description}</p>
         </Jumbotron>
       </Col>

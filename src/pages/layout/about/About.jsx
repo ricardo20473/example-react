@@ -4,12 +4,12 @@ import React from "react";
 import "./About.scss";
 
 // Shared/Components
-import TextInfoComponent from "../../../shared/components/TextInfoComponent";
+import TextInfoComponent from "../../../shared/components/text-info/TextInfoComponent";
 
 const About = () => {
-  const title = "About";
+  const title = "About us";
   const description =
-    "'Who we are', 'About us', 'Our company', 'About us' ... On the websites of all companies there is a space dedicated to allowing visitors (whether they are customers or suppliers) to learn a little more about them .";
+    "On the websites of all companies there is a space dedicated to allowing visitors (whether they are customers or suppliers) to learn a little more about them .";
 
   return (
     <div className="about">

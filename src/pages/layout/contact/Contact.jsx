@@ -5,7 +5,7 @@ import { Button, Col, Form, FormGroup, Input, Label, Row } from "reactstrap";
 import "./Contact.scss";
 
 // Shared/Components
-import TextInfoComponent from "../../../shared/components/TextInfoComponent";
+import TextInfoComponent from "../../../shared/components/text-info/TextInfoComponent";
 
 const Contact = () => {
   const title = "Contact";

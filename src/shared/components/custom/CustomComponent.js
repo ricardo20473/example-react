@@ -1,5 +1,5 @@
 import React from "react";
-import { useFetch } from "../hooks/useFetch";
+import { useFetch } from "../../hooks/useFetch";
 
 const CustomComponent = () => {
   const url = "https://jsonplaceholder.typicode.com/users";
@@ -11,7 +11,7 @@ const CustomComponent = () => {
 
       <h3>Pendiente: {JSON.stringify(isPending)}</h3>
       <h3>Error: {JSON.stringify(error)}</h3>
-      <ul>
+      <ul data-testid="list">
         {value.map((user, index) => {
           return(<li key={index}>{user.name}</li>)
         })}

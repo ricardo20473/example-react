@@ -4,12 +4,12 @@ import React from "react";
 import "./Home.scss";
 
 // Shared/Components
-import TextInfoComponent from "../../../shared/components/TextInfoComponent";
-import CountComponent from "../../../shared/components/CountComponent";
-import ScrollComponent from "../../../shared/components/ScrollComponent";
-import ClockComponent from "../../../shared/components/ClockComponent";
-import AjaxApiComponent from "../../../shared/components/AjaxApiComponent";
-import CustomComponent from "../../../shared/components/CustomComponent";
+import TextInfoComponent from "../../../shared/components/text-info/TextInfoComponent";
+import CountComponent from "../../../shared/components/count/CountComponent";
+import ScrollComponent from "../../../shared/components/scroll/ScrollComponent";
+import ClockComponent from "../../../shared/components/clock/ClockComponent";
+import AjaxApiComponent from "../../../shared/components/ajax-api/AjaxApiComponent";
+import CustomComponent from "../../../shared/components/custom/CustomComponent";
 
 const Home = () => {
   const title = "Welcome, React JS";

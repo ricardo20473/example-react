@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Button } from 'reactstrap';
 
 function Reloj({hour}) {
-  return <h3>{hour}</h3>;
+  return <h3>Time: {hour}</h3>;
 };
 
 const ClockHooks = () => {
@@ -21,7 +21,7 @@ const ClockHooks = () => {
     }
 
     return () => {
-      console.log('Fase Destroy');
+      // Fase Destroy
       clearInterval(temp);
     };
   }, [visible]);

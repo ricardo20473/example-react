@@ -26,8 +26,8 @@ const ScrollHooks = () => {
 
   return (
     <div className="scroll">
-      <h2>Hooks - useEffect y el Ciclo de Vida</h2>
-      <p>Scroll Y del Navegador {scrollY}</p>
+      <h2>Scroll - useEffect y el Ciclo de Vida</h2>
+      <p>Barra del Navegador {scrollY}</p>
     </div>
   );
 }
