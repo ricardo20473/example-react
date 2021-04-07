@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import {
-  Navbar,
-  NavbarBrand,
-  NavbarToggler,
+  Container,
   Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
   Nav,
-  NavItem
+  NavItem,
 } from "reactstrap";
 
 // Page
@@ -27,7 +28,7 @@ function App() {
 
   return (
     <Router>
-      <div className="container">
+      <Container>
         <Navbar color="light" light expand="md">
           <NavbarBrand href="/">React</NavbarBrand>
           <NavbarToggler onClick={toggle} />
@@ -57,7 +58,7 @@ function App() {
             <Home />
           </Route>
         </Switch>
-      </div>
+      </Container>
     </Router>
   );
 }

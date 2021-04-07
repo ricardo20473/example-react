@@ -8,5 +8,9 @@
   &__child-form {
     background: #e9ecef;
     padding: 30px 50px;
+
+    .error {
+      color: #ec5a5a;
+    }
   }
 }
