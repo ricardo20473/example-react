@@ -1,13 +1,15 @@
 import React from "react";
 import { Button, Col, Form, FormGroup, Input, Label, Row } from "reactstrap";
 import { useFormik } from "formik";
-import * as Yup from 'yup';
 
 // Sass
 import "./Contact.scss";
 
 // Shared/Components
 import TextInfoComponent from "../../../shared/components/text-info/TextInfoComponent";
+
+// Shared/Schema
+import ContactSchema from '../../../shared/schema/ContactSchema';
 
 const Contact = () => {
   const title = "Contact";
@@ -20,11 +22,7 @@ const Contact = () => {
       email: "",
       message: "",
     },
-    validationSchema: Yup.object({
-      name: Yup.string().required("El campo nombre es requerido"),
-      email: Yup.string().email().required(),
-      message: Yup.string().required()
-    }),
+    validationSchema: ContactSchema,
     onSubmit: (formDate) => {
       console.log("formDate", formDate);
     },
